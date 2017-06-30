@@ -8,7 +8,7 @@
    <hr>
   <% @products.localCountry.each do |product| %>
     <div class="productDiv">
-      <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+      <%= product.name%> <%= link_to "click for more details", product_path(product) %>
     </div>
   <% end %>
 
@@ -16,7 +16,7 @@
  <hr>
   <% @products.each do |product| %>
     <div class="productDiv">
-      <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+      <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "click for more details", product_path(product) %>
     </div>
   <% end %>
 </div>

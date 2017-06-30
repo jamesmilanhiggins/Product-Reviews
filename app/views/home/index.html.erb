@@ -14,7 +14,7 @@
       <h2>Most Recently Added </h2>
         <% @products.createdNew.each do |product| %>
           <div class="productDiv">
-            <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+            <%= product.name%> <%= link_to "click for more details", product_path(product) %>
           </div>
         <% end %>
     </div>
@@ -22,7 +22,7 @@
       <h2>Most Reviewed</h2>
         <% @products.mostReviews.each do |product| %>
           <div class="productDiv">
-            <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product)%><br>Number of reviews:<%= product.reviews.length%>
+            <%= product.name%> <%= link_to "click for more details", product_path(product)%><br>Number of reviews:<%= product.reviews.length%>
           </div>
         <% end %>
     </div>
