@@ -21,7 +21,6 @@ _Users can add a new product. Then click into the product to see its details, an
 $ cd desktop
 $ git clone https://github.com/jamesmilanhiggins/Product-Reviews
 $ cd Product-Reviews
-$ cd bundle
 $ bundle
 $ rails db:create
 $ rake db:reset
