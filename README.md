@@ -2,7 +2,7 @@
 
 #### _This app lets Mario(or anyone else) add products to his store. You can also add individual reviews to each product._
 
-Visit Live Site [here](https://marcusisonline2.firebaseapp.com)
+Visit Live Site [here](https://)
 
 #### By _**James Higgins**_
 
@@ -21,7 +21,7 @@ _Users can add a new product. Then click into the product to see its details, an
 ```
 $ cd desktop
 $ git clone https://github.com/jamesmilanhiggins/Product-Reviews
-$ cd product-reviews
+$ cd Product-Reviews
 $ cd bundle
 $ bundle
 $ rails db:create
@@ -29,12 +29,10 @@ $ rake db:reset
 $ rails s
 $ open localhost:3000 in your browser
 ```
-or visit live site [here](https://marcusisonline2.firebaseapp.com)
-Note: You can log in with the test email: "testemail@gmail.com" and the password: "12456" to view the admin capabilities.
 
 ## Known Bugs
 
-* There are no known bugs at this time*
+* There are no known bugs at this time
 
 
 ## Support and contact details
@@ -53,6 +51,6 @@ _Please contact James Higgins at James.Milan.Higgins@gmail.com if you have any q
 
 Copyright (c) 2017 **_James Higgins**
 
-![Homepage not logged in]()
-![homepage logged in]()
-![pipe]()
+![Homepage](app/assets/images/Homepage.png)
+![List of Products](app/assets/images/Products-List.png)
+![Review List](app/assets/images/review-list.png)
