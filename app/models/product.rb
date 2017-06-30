@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
 
  scope :updatedNew, -> { order(updated_at: :desc).limit(3)}
  scope :createdNew, -> { order(created_at: :desc).limit(3)}
-
+ scope :localCountry, -> { where(country: "USA")}
  scope :mostReviews, -> {(
    select("products.id, products.name, products.cost, products.country, count(reviews.id) as reviews_count")
    .joins(:reviews)
