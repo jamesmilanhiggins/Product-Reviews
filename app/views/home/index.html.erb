@@ -1,32 +1,39 @@
 
 
 <div class="container">
-
-  <h2>Mario's 3 Most Recently Updated Products</h2>
-  <ul>
-    <% @products.updatedNew.each do |product| %>
-    <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
-    <% end %>
-  </ul>
-  <h2>Mario's 3 Most Recently Added Products</h2>
-  <ul>
-    <% @products.createdNew.each do |product| %>
-    <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
-    <% end %>
-  </ul>
-  <h2>Mario's Most Reviewed Product</h2>
-
-  <ul>
-    <% @products.mostReviews.each do |product| %>
-      <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %><br>Number of reviews:<%= product.reviews.length%></li>
-    <% end %>
-  </ul>
+  <div class="row">
+    <div class="col-lg-4">
+      <h2>Most Recently Updated</h2>
+      <% @products.updatedNew.each do |product| %>
+        <div class="productDiv">
+          <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-lg-4">
+      <h2>Most Recently Added </h2>
+        <% @products.createdNew.each do |product| %>
+          <div class="productDiv">
+            <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+          </div>
+        <% end %>
+    </div>
+    <div class="col-lg-4">
+      <h2>Most Reviewed</h2>
+        <% @products.mostReviews.each do |product| %>
+          <div class="productDiv">
+            <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product)%><br>Number of reviews:<%= product.reviews.length%>
+          </div>
+        <% end %>
+    </div>
+  </div>
+  <hr>
   <div class="about">
     <h2>About Mario</h2>
     <p> Mario is an Italian plumber. He sells many different products. His products have many reviews
     </p>
     <h2>Fun Facts</h2>
-    <ul>
+    <div class="productDiv">
       <li>Mario Was Once Voiced by Optimus Prime</li>
       <li>Mario Lent His Name to Other Iconic Nintendo Characters</li>
       <li>Wart Showed Up in a Zelda Game</li>
@@ -35,6 +42,6 @@
       <li>The Starman Was the First Mario Power-Up to Have Eyes</li>
       <li>Birdo is Transgendered</li>
       <li>Super Mario Bros. 2 Is Actually Doki Doki Panic</li>
-    </ul>
+    </div>
   </div>
 </div>

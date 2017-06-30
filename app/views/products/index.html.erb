@@ -1,21 +1,22 @@
 <div class="container">
 
-  <ul class="nav nav-tabs nav-justified">
+  <ul class="nav nav-tabs nav-justified myNav">
     <li role="presentation" ><%= link_to "New Product", new_product_path %></li>
   </ul>
 
   <h2>Mario's Products Made in the USA</h2>
-  <ul>
-    <% @products.localCountry.each do |product| %>
-      <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
-    <% end %>
-  </ul>
+   <hr>
+  <% @products.localCountry.each do |product| %>
+    <div class="productDiv">
+      <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+    </div>
+  <% end %>
 
  <h2>List of All Mario's Products</h2>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
-    <% end %>
-  </ul>
-
+ <hr>
+  <% @products.each do |product| %>
+    <div class="productDiv">
+      <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+    </div>
+  <% end %>
 </div>
