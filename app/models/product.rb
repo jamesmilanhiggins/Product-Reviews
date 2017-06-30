@@ -4,6 +4,6 @@ class Product < ActiveRecord::Base
   validates :cost, :presence => true
   validates :country, :presence => true
 
-
+ scope :updatedNew, -> { order(updated_at: :desc)}
 
 end

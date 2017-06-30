@@ -4,17 +4,23 @@
 <h2>List of Mario's Products</h2>
 
 <ul>
-  <% @products.each do |product| %>
+  <% @products.updatedNew.each do |product| %>
     <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
   <% end %>
 </ul>
 
-<h2>List of Mario's Most Popular Product (has most reviews)</h2>
+<h2>Mario's Most Reviewed Product</h2>
 
-<ul>
+
+<h2>The Three most recently added Products</h2>
+
+
+<h2>Mario's Products Made in the USA</h2>
+
+<!-- <ul>
   <% @products.each do |product| %>
     <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
   <% end %>
-</ul>
+</ul> -->
 
 <%= link_to "New Product", new_product_path %>
