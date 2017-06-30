@@ -1,17 +1,15 @@
-
-
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <h2>Most Recently Updated</h2>
+      <h2>Recently Updated</h2>
       <% @products.updatedNew.each do |product| %>
         <div class="productDiv">
-          <%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %>
+          <%= product.name%> <%= link_to "click for more details", product_path(product) %>
         </div>
       <% end %>
     </div>
     <div class="col-lg-4">
-      <h2>Most Recently Added </h2>
+      <h2>Recently Added </h2>
         <% @products.createdNew.each do |product| %>
           <div class="productDiv">
             <%= product.name%> <%= link_to "click for more details", product_path(product) %>
@@ -28,20 +26,29 @@
     </div>
   </div>
   <hr>
-  <div class="about">
-    <h2>About Mario</h2>
-    <p> Mario is an Italian plumber. He sells many different products. His products have many reviews
-    </p>
-    <h2>Fun Facts</h2>
-    <div class="productDiv">
-      <li>Mario Was Once Voiced by Optimus Prime</li>
-      <li>Mario Lent His Name to Other Iconic Nintendo Characters</li>
-      <li>Wart Showed Up in a Zelda Game</li>
-      <li>Shigeru Miyamoto Had Nothing to Do With Super Mario Land</li>
-      <li>Mario’s Wardrobe Has Been Inverted</li>
-      <li>The Starman Was the First Mario Power-Up to Have Eyes</li>
-      <li>Birdo is Transgendered</li>
-      <li>Super Mario Bros. 2 Is Actually Doki Doki Panic</li>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="productDiv">
+        <h2>About Mario</h2>
+        <p> Mario is an Italian plumber. He sells many different products. His products have many reviews
+        </p>
+        <div class="image">
+          <%= image_tag "mario.png" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h2>Fun Facts</h2>
+        <div class="productDiv">
+          <p>Mario Was Once Voiced by Optimus Prime</p>
+          <p>Mario Lent His Name to Other Iconic Nintendo Characters</p>
+          <p>Wart Showed Up in a Zelda Game</p>
+          <p>Shigeru Miyamoto Had Nothing to Do With Super Mario Land</p>
+          <p>Mario’s Wardrobe Has Been Inverted</p>
+          <p>The Starman Was the First Mario Power-Up to Have Eyes</p>
+          <p>Birdo is Transgendered</p>
+          <p>Super Mario Bros. 2 Is Actually Doki Doki Panic</p>
+      </div>
     </div>
   </div>
 </div>

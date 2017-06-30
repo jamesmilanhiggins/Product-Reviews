@@ -23,6 +23,11 @@
 
 }
 
+.image {
+  padding-left: 200px;
+  height: 200px;
+  width: 100px;
+}
 
 
 h1  {
@@ -31,4 +36,10 @@ h1  {
 h2  {
   font-size: 38px;
   font-weight: lighter;
+}
+
+input, textarea {
+  color: black;
+  font-style: normal;
+  font-weight: 200;
 }

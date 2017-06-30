@@ -1,4 +1,18 @@
 <div class="container">
+  <ul class="nav nav-tabs nav-justified myNav">
+    <li role="presentation" ><%= link_to "Add A Review", new_product_review_path(@product) %></li>
+
+
+    <li role="presentation" ><%= link_to "Edit Product", edit_product_path(@product) %></li>
+
+
+    <li role="presentation" ><%= link_to "Delete Product", product_path(@product),
+                             :data => {:confirm => "You sure?",
+                                       :method => "delete"} %></li>
+  </ul>
+
+
+
   <div class="row">
     <div class="col-lg-4">
       <h2>Product: <%= @product.name %></h2>
@@ -23,7 +37,6 @@
         <%= link_to "Edit Review", edit_product_review_path(@product, review) %> |
         <%= link_to "Delete Review", product_review_path(@product, review),
         :data => {:confirm => "Are you sure?", :method => "delete"} %>
-
         <hr>
 
       </div>
@@ -33,12 +46,4 @@
   <p>There are no reviews yet!</p>
 <% end %>
 
-<p><%= link_to "Add A Review", new_product_review_path(@product) %></p>
-<p><%= link_to "Edit Product", edit_product_path(@product) %></p>
-<p><%= link_to "Delete Product", product_path(@product),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
-
-<hr>
-<p><%= link_to "Return to products", products_path %></p>
 </div>
