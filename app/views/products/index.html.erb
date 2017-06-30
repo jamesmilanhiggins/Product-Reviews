@@ -1,26 +1,47 @@
-<h1>Mario's Tasty Product Site </h1>
+<!-- <div class="jumbotron"> -->
+  <h1>Mario's Tasty Product Site </h1>
+<!-- </div> -->
+
+<div class="container">
 
 
-<h2>List of Mario's Products</h2>
-
-<ul>
-  <% @products.updatedNew.each do |product| %>
+  <h2>Mario's 3 Most Recently Updated Products</h2>
+  <ul>
+    <% @products.updatedNew.each do |product| %>
     <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
-  <% end %>
-</ul>
-
-<h2>Mario's Most Reviewed Product</h2>
-
-
-<h2>The Three most recently added Products</h2>
-
-
-<h2>Mario's Products Made in the USA</h2>
-
-<!-- <ul>
-  <% @products.each do |product| %>
+    <% end %>
+  </ul>
+  <h2>Mario's 3 Most Recently Added Products</h2>
+  <ul>
+    <% @products.createdNew.each do |product| %>
     <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
-  <% end %>
-</ul> -->
+    <% end %>
+  </ul>
+  <h2>Mario's Most Reviewed Product</h2>
 
-<%= link_to "New Product", new_product_path %>
+  <ul>
+    <% @products.mostReviews.each do |product| %>
+      <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
+    <% end %>
+  </ul>
+
+  <!-- <h2>Mario's Products Made in the USA</h2>
+
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
+    <% end %>
+  </ul> -->
+
+
+
+ <h2>List of All Mario's Products</h2>
+
+  <!-- <ul>
+    <% @products.each do |product| %>
+      <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
+    <% end %>
+  </ul> -->
+
+  <%= link_to "New Product", new_product_path %>
+</div>

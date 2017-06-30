@@ -1,0 +1,13 @@
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+.jumbotron {
+  text-align: center;
+}
+
+
+ body {
+  background-image: url("https://media.giphy.com/media/GUOocZG5V1wn6/giphy.gif");
+  // background-color: red;
+  color: white;
+}
