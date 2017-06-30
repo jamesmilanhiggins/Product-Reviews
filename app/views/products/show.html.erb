@@ -1,49 +1,43 @@
 <div class="container">
   <ul class="nav nav-tabs nav-justified myNav">
     <li role="presentation" ><%= link_to "Add A Review", new_product_review_path(@product) %></li>
-
-
     <li role="presentation" ><%= link_to "Edit Product", edit_product_path(@product) %></li>
-
-
     <li role="presentation" ><%= link_to "Delete Product", product_path(@product),
                              :data => {:confirm => "You sure?",
                                        :method => "delete"} %></li>
   </ul>
 
-
-
   <div class="row">
     <div class="col-lg-4">
       <h2>Product: <%= @product.name %></h2>
     </div>
+
     <div class="col-lg-4">
       <h2>Price $ <%= @product.cost %></h2>
     </div>
+
     <div class="col-lg-4">
       <h2>Country: <%= @product.country %></h2>
     </div>
   </div>
 
-<% if @product.reviews.any? %>
-  <hr>
-
-  <ul>
-    <% @product.reviews.each do |review|%>
-    <div class="productDiv">
-        Reviewed by: <%= review.author %> <br>
-        Review: <%= review.content_body %> <br>
-        Rating: <%= review.rating %> <br>
-        <%= link_to "Edit Review", edit_product_review_path(@product, review) %> |
-        <%= link_to "Delete Review", product_review_path(@product, review),
-        :data => {:confirm => "Are you sure?", :method => "delete"} %>
-        <hr>
-
-      </div>
-    <% end %>
-  </ul>
-<% else %>
-  <p>There are no reviews yet!</p>
-<% end %>
+  <% if @product.reviews.any? %>
+    <hr>
+    <ul>
+      <% @product.reviews.each do |review|%>
+      <div class="productDiv">
+          Reviewed by: <%= review.author %> <br>
+          Review: <%= review.content_body %> <br>
+          Rating: <%= review.rating %> <br>
+          <%= link_to "Edit Review", edit_product_review_path(@product, review) %> |
+          <%= link_to "Delete Review", product_review_path(@product, review),
+          :data => {:confirm => "Are you sure?", :method => "delete"} %>
+          <hr>
+        </div>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no reviews yet!</p>
+  <% end %>
 
 </div>

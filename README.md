@@ -12,7 +12,6 @@ _Users can add a new product. Then click into the product to see its details, an
 
 ## Setup/Installation Requirements
 
-
 ### Access Atom Files
 
 * _Ensure connection to the Internet_

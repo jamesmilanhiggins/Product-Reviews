@@ -5,7 +5,7 @@
   </ul>
 
   <h2>Mario's Products Made in the USA</h2>
-   <hr>
+  <hr>
   <% @products.localCountry.each do |product| %>
     <div class="productDiv">
       <%= product.name%> <%= link_to "click for more details", product_path(product) %>
