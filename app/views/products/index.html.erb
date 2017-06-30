@@ -9,4 +9,12 @@
   <% end %>
 </ul>
 
+<h2>List of Mario's Most Popular Product (has most reviews)</h2>
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= product.name%> <%= product.cost%> <%= product.country%> <%= link_to "link to details page", product_path(product) %></li>
+  <% end %>
+</ul>
+
 <%= link_to "New Product", new_product_path %>

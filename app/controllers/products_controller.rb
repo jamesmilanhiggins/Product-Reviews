@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
-  
+
   def index
     @products = Product.all
+    # @popular_product = Product.popular
   end
 
   def show
