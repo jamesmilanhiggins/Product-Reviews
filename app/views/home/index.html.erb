@@ -20,11 +20,11 @@
 
     <div class="col-lg-4">
       <h2>Most Reviewed</h2>
-        <% @products.mostReviews.each do |product| %>
-          <div class="productDiv">
-            <%= product.name%> <%= link_to "click for more details", product_path(product)%><br>Number of reviews:<%= product.reviews.length%>
-          </div>
-        <% end %>
+      <% @products.mostReviews.each do |product| %>
+        <div class="productDiv">
+          <%= product.name%> <%= link_to "click for more details", product_path(product)%><br>Number of reviews:<%= product.reviews.length%>
+        </div>
+      <% end %>
     </div>
   </div>
 

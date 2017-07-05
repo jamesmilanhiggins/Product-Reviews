@@ -10,7 +10,7 @@ class Product < ActiveRecord::Base
  scope :mostReviews, -> {(
    select("products.id, products.name, products.cost, products.country, count(reviews.id) as reviews_count")
    .joins(:reviews)
-   .group("reviews.id")
+   .group("products.id")
    .order("reviews_count DESC")
    .limit(1)
    )}
